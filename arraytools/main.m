@@ -2,8 +2,8 @@
 //  main.m
 //  arraytools
 //
-//  Created by Manuel Meyer on 28.08.11.
-//  Copyright (c) 2011 apparatschik. All rights reserved.
+//  Created by vikingosegundo on 28.08.11.
+//  Copyright (c) 2011 vikingosegundo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
