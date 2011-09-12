@@ -10,6 +10,7 @@
 		6404508A1409CF1D00B3B580 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 640450891409CF1D00B3B580 /* Foundation.framework */; };
 		6404508D1409CF1D00B3B580 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6404508C1409CF1D00B3B580 /* main.m */; };
 		640450911409CF1D00B3B580 /* arraytools.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 640450901409CF1D00B3B580 /* arraytools.1 */; };
+		640450991409CF5C00B3B580 /* NSArray+FunctionalTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 640450981409CF5C00B3B580 /* NSArray+FunctionalTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +30,10 @@
 		640450851409CF1D00B3B580 /* arraytools */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = arraytools; sourceTree = BUILT_PRODUCTS_DIR; };
 		640450891409CF1D00B3B580 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6404508C1409CF1D00B3B580 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6404508F1409CF1D00B3B580 /* arraytools-Prefix.pch */ = {isa = PBXFileReference; path = "arraytools-Prefix.pch"; sourceTree = "<group>"; };
+		6404508F1409CF1D00B3B580 /* arraytools-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "arraytools-Prefix.pch"; sourceTree = "<group>"; };
 		640450901409CF1D00B3B580 /* arraytools.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = arraytools.1; sourceTree = "<group>"; };
+		640450971409CF5C00B3B580 /* NSArray+FunctionalTools.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSArray+FunctionalTools.h"; sourceTree = "<group>"; };
+		640450981409CF5C00B3B580 /* NSArray+FunctionalTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FunctionalTools.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				6404508C1409CF1D00B3B580 /* main.m */,
+				640450971409CF5C00B3B580 /* NSArray+FunctionalTools.h */,
+				640450981409CF5C00B3B580 /* NSArray+FunctionalTools.m */,
 				640450901409CF1D00B3B580 /* arraytools.1 */,
 				6404508E1409CF1D00B3B580 /* Supporting Files */,
 			);
@@ -140,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6404508D1409CF1D00B3B580 /* main.m in Sources */,
+				640450991409CF5C00B3B580 /* NSArray+FunctionalTools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
