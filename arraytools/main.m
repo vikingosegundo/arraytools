@@ -11,7 +11,7 @@
 int main (int argc, const char * argv[])
 {
 
-	@autoreleasepool {
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 		NSArray *array = [NSArray arrayWithObjects:@"aa", @"ab",@"c",@"ad",@"dd", nil];
 		
 		array = [array arrayByPerformingBlock:^id(id element) { return [element stringByAppendingString:element]; } 
@@ -42,8 +42,15 @@ int main (int argc, const char * argv[])
 		[array performBlock:^(id element) {if ([element hasPrefix:@"a"]) [positive addObject:element]; else [negative addObject:element];}];
 		NSLog(@"%@", positive);
 		NSLog(@"%@", negative);
-
-	};
+		
+		
+		NSArray *youtubeVideos = [[NSArray arrayWithObjects: 
+								  @"http://example.com/index.php?number=1&keyword=", 
+								  @"http://example.com/index.php?number=2&keyword=",
+								   nil] arrayByPerformingBlock:^id(id element) { return [element stringByAppendingString:@"KeyWord"];}];
+		
+		NSLog(@"%@", youtubeVideos);
+	[pool drain];
     return 0;
 }
 
