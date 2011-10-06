@@ -8,7 +8,7 @@ So far it includes methods using blocks to enable functional-style programming
 							
 or 
 
-   NSMutableArray *falsePositives = [NSMutableArray array];
+    NSMutableArray *falsePositives = [NSMutableArray array];
 		array = [NSArray arrayWithObjects:@"aa", @"ab",@"c",@"ad",@"dd", nil];
 
 		array = [array arrayByPerformingBlock:^id  (id element) {return [element stringByAppendingString:element];} 
