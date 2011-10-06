@@ -16,7 +16,7 @@ or
 							 elsePerformBlock:^    (id element) {[falsePositives addObject:element];}
 				 ]; 
 				
-and a toolset for handling shuffeling
+and a toolset for handling shuffling
 
     NSSet *set = [array setWithRandomElementsSize:3];
 	NSArray *shuffeldArray = [array arrayShuffled];
