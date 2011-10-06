@@ -10,16 +10,16 @@
 
 @implementation NSArray (RandomUtils)
 
--(NSMutableArray *)mutableArraySuffled
+-(NSMutableArray *)mutableArrayShuffled
 {
 	NSMutableArray *array = [[self mutableCopy] autorelease];
 	[array shuffle];
 	return array;
 }
 
--(NSMutableArray *)arraySuffled
+-(NSMutableArray *)arrayShuffled
 {
-	return [NSArray arrayWithArray:[self mutableArraySuffled]];
+	return [NSArray arrayWithArray:[self mutableArrayShuffled]];
 }
 
 -(id)randomElement
@@ -37,7 +37,7 @@
 					format:@"NSArray's size (%d) is too small to fill a random set with size %d", [self count], size];
 
 	NSMutableSet *set = [NSMutableSet set];
-	NSMutableArray *array = [self mutableArraySuffled];
+	NSMutableArray *array = [self mutableArrayShuffled];
 	
 	if (size == [array count]) 
 		return [NSSet setWithArray:array];
