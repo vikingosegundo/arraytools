@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "NSArray+FunctionalTools.h"
+#import "NSArray+RandomUtils.h"
+
 int main (int argc, const char * argv[])
 {
 
@@ -15,8 +17,7 @@ int main (int argc, const char * argv[])
 		NSArray *array = [NSArray arrayWithObjects:@"aa", @"ab",@"c",@"ad",@"dd", nil];
 		
 		array = [array arrayByPerformingBlock:^id(id element) { return [element stringByAppendingString:element]; } 
-						  ifElementPassesTest:^BOOL(id element) {return [element hasPrefix:@"a"];}
-				 ];
+						  ifElementPassesTest:^BOOL(id element) {return [element hasPrefix:@"a"];}];
 		NSLog(@"%@", array);
 		
 		NSMutableArray *falsePositives = [NSMutableArray array];
@@ -31,8 +32,7 @@ int main (int argc, const char * argv[])
 							 withIndexFromRange:NSMakeRange(0, 10)];
 		
 		array = [array arrayByPerformingBlock:^id  (id element) {return [NSNumber numberWithLong:[(NSNumber *)element longValue] * 3];} 
-						  ifElementPassesTest:^BOOL(id element) {return [element longValue] %2 ==0 ;}
-				 ];
+						  ifElementPassesTest:^BOOL(id element) {return [element longValue] %2 ==0 ;}];
 		NSLog(@"%@", array);
 		
 		array = [NSArray arrayWithObjects:@"aa", @"ab",@"c",@"ad",@"dd", nil];
@@ -50,6 +50,33 @@ int main (int argc, const char * argv[])
 								   nil] arrayByPerformingBlock:^id(id element) { return [element stringByAppendingString:@"KeyWord"];}];
 		
 		NSLog(@"%@", youtubeVideos);
+	
+	NSArray *myArray =[NSArray arrayWithObjects: [NSNumber numberWithFloat:45.0],[NSNumber numberWithFloat:122.0], [NSNumber numberWithFloat:21.01], [NSNumber numberWithFloat:5.9], nil];
+//	NSArray *sortedArray = [myArray sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+//		if ([obj1 floatValue] > [obj2 floatValue])
+//			return NSOrderedDescending;
+//		else if ([obj1 floatValue] < [obj2 floatValue])
+//			return NSOrderedAscending;
+//		return NSOrderedSame;
+//	}];
+//	
+//	NSLog(@"%@", sortedArray);
+	
+	
+	NSSortDescriptor *sortDescriptor;
+	sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"floatValue"
+												  ascending:YES] autorelease];
+	NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+	NSArray *sortedArray = [myArray sortedArrayUsingDescriptors:sortDescriptors];
+	NSLog(@"%@", sortedArray);
+	
+	array = [NSArray arrayWithObjects:@"aa", @"ab",@"c",@"ad",@"dd", nil];
+	NSSet *set = [array setWithRandomElementsSize:3];
+	NSLog(@"%@", set);
+	
+	id object = [array randomElement];
+	NSLog(@"%@", object);
+	
 	[pool drain];
     return 0;
 }
