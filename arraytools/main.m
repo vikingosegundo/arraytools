@@ -71,8 +71,12 @@ int main (int argc, const char * argv[])
 	NSLog(@"%@", sortedArray);
 	
 	array = [NSArray arrayWithObjects:@"aa", @"ab",@"c",@"ad",@"dd", nil];
-	NSSet *set = [array setWithRandomElementsSize:3];
-	NSLog(@"%@", set);
+	array = [array arrayByAddingObjectsFromArray:array];
+	NSSet *set = [array setWithRandomElementsSize:4];
+	NSLog(@"%@ %lu", set, [set count]);
+	NSArray *shuffeldArray = [array arrayWithRandomElementsSize:9];
+	
+	NSLog(@"%@ %lu", shuffeldArray, [shuffeldArray count]);
 	
 	id object = [array randomElement];
 	NSLog(@"%@", object);

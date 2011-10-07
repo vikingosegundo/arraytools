@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSArray (RandomUtils)
+-(NSMutableSet *)mutableSet;
 -(NSMutableArray *)mutableArrayShuffled;
 -(NSMutableArray *)arrayShuffled;
 -(id)randomElement;
