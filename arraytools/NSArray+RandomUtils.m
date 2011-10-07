@@ -44,22 +44,11 @@
 -(NSSet *)setWithRandomElementsSize:(NSUInteger)size
 {
 	if ([self count]<1) return nil;
-//	if (size > [self count]) 
-//		[NSException raise:@"NSArrayNotEnoughElements" 
-//					format:@"NSArray's size (%d) is too small to fill a random set with size %d", [self count], size];
-
+	
 	NSMutableArray *array = [self mutableArrayShuffledWithoutDuplicates];
-	NSAssert2(size < [array count],@"not enough unique elements. NSArray contains %d unique elements, but %d are requested", [array count], size);
-//	NSMutableSet *set = [NSMutableSet set];	
-//	if (size == [array count]) 
-//		return [NSSet setWithArray:array];
-//	
-//	while ([set count]< size) {
-//		id object = [array objectAtIndex:0];
-//		[array removeObjectAtIndex:0];
-//		[set addObject:object];
-//		
-//	}
+	if (size > [array count]) 
+		[NSException raise:NSInternalInconsistencyException 
+					format:@"NSArray's size (%d) is too small to fill a set with size %d", [array count], size];	
 	return [NSSet setWithArray:[array subarrayWithRange:NSMakeRange(0, size)]];
 }
 
