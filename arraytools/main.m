@@ -103,14 +103,14 @@ NSArray* quicksort(NSArray *array)
 	if ([array count]<2) return array;
 	
 	id pivot = [array randomElement];
-	NSArray *array2= [NSMutableArray array];
+	NSMutableArray *array2= [NSMutableArray array];
 	
 	array = [array arrayByPerformingBlock:^id(id element) {
 			return element;
 		} ifElementPassesTest:^BOOL(id element) {
 			return [element intValue] < [pivot intValue];
 		} elsePerformBlock:^(id element) {
-			if (element!=pivot) [(NSMutableArray *)array2 addObject:element];
+			if (element!=pivot) [array2 addObject:element];
 	}];
 	return [[[NSArray arrayWithArray:quicksort(array)] 
 						arrayByAddingObject:pivot] 

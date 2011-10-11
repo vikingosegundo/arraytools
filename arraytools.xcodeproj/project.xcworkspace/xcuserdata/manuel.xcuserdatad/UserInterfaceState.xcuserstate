@@ -234,7 +234,7 @@
 		<string>IDEEditorArea</string>
 		<integer>0</integer>
 		<true/>
-		<string>NSArray+FunctionalTools.h</string>
+		<string>main.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -559,7 +559,7 @@
 		</dict>
 		<string>arraytools</string>
 		<string>arraytools</string>
-		<string>NSArray+FunctionalTools.h</string>
+		<string>main.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1365,7 +1365,7 @@
 				<integer>141</integer>
 			</dict>
 			<key>NS.string</key>
-			<string>file://localhost/Users/manuel/Projects/arraytools/arraytools/NSArray+FunctionalTools.h</string>
+			<string>file://localhost/Users/manuel/Projects/arraytools/arraytools/main.m</string>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -1627,7 +1627,7 @@
 		<string>DocumentNavigableItemName</string>
 		<string>DocumentExtensionIdentifier</string>
 		<string>DocumentURL</string>
-		<string>public.c-header</string>
+		<string>public.objective-c-source</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1763,10 +1763,10 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>339988236.048522</real>
-		<string>{0, 1152}</string>
-		<string>{542, 0}</string>
-		<string>-arrayByPerformingBlock:ifElementPassesTest:</string>
+		<real>339988695.66105199</real>
+		<string>{3114, 1239}</string>
+		<string>{4175, 0}</string>
+		<string>quicksort()</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
 			<key>$class</key>
@@ -1785,7 +1785,7 @@
 				<integer>183</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/manuel/Projects/arraytools/arraytools/NSArray+FunctionalTools.h</string>
+		<string>file://localhost/Users/manuel/Projects/arraytools/arraytools/main.m</string>
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -6227,7 +6227,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>557</integer>
+					<integer>556</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -6235,11 +6235,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>559</integer>
+					<integer>558</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>561</integer>
+					<integer>560</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -6247,7 +6247,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>563</integer>
+					<integer>562</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -6350,17 +6350,8 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>556</integer>
+				<integer>140</integer>
 			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>141</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/manuel/Projects/arraytools/arraytools/main.m</string>
 		</dict>
 		<dict>
 			<key>$class</key>
@@ -6376,7 +6367,7 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>558</integer>
+				<integer>557</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -6402,7 +6393,7 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>560</integer>
+				<integer>559</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -6428,7 +6419,7 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>562</integer>
+				<integer>561</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -6454,8 +6445,17 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>140</integer>
+				<integer>563</integer>
 			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>141</integer>
+			</dict>
+			<key>NS.string</key>
+			<string>file://localhost/Users/manuel/Projects/arraytools/arraytools/NSArray+FunctionalTools.h</string>
 		</dict>
 		<dict>
 			<key>$class</key>
@@ -6603,9 +6603,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339988230.98439598</real>
-		<string>{3114, 1250}</string>
-		<string>{4312, 0}</string>
+		<real>339988695.66039598</real>
+		<string>{3114, 1239}</string>
+		<string>{4175, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6890,9 +6890,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>339988236.04780602</real>
+		<real>339988668.76216799</real>
 		<string>{0, 1152}</string>
-		<string>{542, 0}</string>
+		<string>{596, 185}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7390,7 +7390,7 @@
 				<integer>648</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>339988193.11093402</real>
+			<real>339988684.28156298</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -7401,7 +7401,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 03:09</string>
+		<string>Today at 03:18</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>
@@ -7601,7 +7601,7 @@
 				<integer>667</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/manuel/Projects/arraytools/arraytools/NSArray+FunctionalTools.h</string>
+		<string>file://localhost/Users/manuel/Projects/arraytools/arraytools/main.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7619,7 +7619,7 @@
 				<integer>669</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/manuel/Projects/arraytools/arraytools/main.m</string>
+		<string>file://localhost/Users/manuel/Projects/arraytools/arraytools/NSArray+FunctionalTools.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
