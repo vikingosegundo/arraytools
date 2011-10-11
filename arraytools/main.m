@@ -93,6 +93,31 @@ int main (int argc, const char * argv[])
 	array = quicksort(array);
 	
 	NSLog(@"%@", array);
+	
+	
+	array = [array arrayByPerformingBlock:^id(id element) {
+		return element;
+	} ifElementPassesTest:^BOOL(id element) {
+		return [array indexOfObject:element]%2 ==0;
+	}];
+	
+	NSLog(@"%@", array);
+	
+	
+	
+	array = [NSArray arrayByPerformingBlock:^id(NSInteger index) {
+		return [NSNumber numberWithLong:index];
+	} withIndexFromRange:NSMakeRange(0, 20)];
+	
+	NSMutableArray *evenArray = [NSMutableArray array];
+	[array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		if ([array indexOfObject:obj]%4 == 0) 
+			[evenArray addObject:obj];
+	}];
+	
+	NSLog(@"%@", evenArray);
+	
+	
 	[pool drain];
     return 0;
 }

@@ -20,3 +20,20 @@ and a toolset for handling shuffling
 
     NSSet *set = [array setWithRandomElementsSize:3];
 	NSArray *shuffeldArray = [array arrayShuffled];
+
+
+A compact Quicksort imlementation:
+
+	NSArray* quicksort(NSArray *array)
+	{
+		if ([array count]<2) return array;
+		
+		id pivot = [array randomElement];
+		NSMutableArray *array2= [NSMutableArray array];
+		
+		array = [array arrayByPerformingBlock:^id(id element) { return element;} 
+						  ifElementPassesTest:^BOOL(id element) {return [element intValue] < [pivot intValue];} 
+							 elsePerformBlock:^(id element) { if (element!=pivot) [array2 addObject:element];}
+		];
+		return [[[NSArray arrayWithArray:quicksort(array)] arrayByAddingObject:pivot] arrayByAddingObjectsFromArray:quicksort(array2)];
+	}
