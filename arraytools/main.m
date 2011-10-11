@@ -10,6 +10,9 @@
 #import "NSArray+FunctionalTools.h"
 #import "NSArray+RandomUtils.h"
 
+
+NSArray* quicksort(NSArray *array);
+
 int main (int argc, const char * argv[])
 {
 
@@ -81,7 +84,35 @@ int main (int argc, const char * argv[])
 	id object = [array randomElement];
 	NSLog(@"%@", object);
 	
+	array = [NSArray arrayByPerformingBlock:^id(NSInteger index) {
+		return [NSNumber numberWithLong:index];
+	} withIndexFromRange:NSMakeRange(0, 20)];
+	
+	array = [array arrayShuffled];
+	
+	array = quicksort(array);
+	
+	NSLog(@"%@", array);
 	[pool drain];
     return 0;
 }
 
+
+NSArray* quicksort(NSArray *array)
+{
+	if ([array count]<2) return array;
+	
+	id pivot = [array randomElement];
+	NSArray *array2= [NSMutableArray array];
+	
+	array = [array arrayByPerformingBlock:^id(id element) {
+			return element;
+		} ifElementPassesTest:^BOOL(id element) {
+			return [element intValue] < [pivot intValue];
+		} elsePerformBlock:^(id element) {
+			if (element!=pivot) [(NSMutableArray *)array2 addObject:element];
+	}];
+	return [[[NSArray arrayWithArray:quicksort(array)] 
+						arrayByAddingObject:pivot] 
+							arrayByAddingObjectsFromArray:quicksort(array2)];
+}
