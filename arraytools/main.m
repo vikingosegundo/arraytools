@@ -98,7 +98,7 @@ int main (int argc, const char * argv[])
 	array = [array arrayByPerformingBlock:^id(id element) {
 		return element;
 	} ifElementPassesTest:^BOOL(id element) {
-		return [array indexOfObject:element]%2 ==0;
+		return [array indexOfObject:element]%4 ==0;
 	}];
 	
 	NSLog(@"%@", array);

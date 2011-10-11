@@ -31,9 +31,9 @@ A compact Quicksort imlementation:
 		id pivot = [array randomElement];
 		NSMutableArray *array2= [NSMutableArray array];
 		
-		array = [array arrayByPerformingBlock:^id(id element) { return element;} 
-						  ifElementPassesTest:^BOOL(id element) {return [element intValue] < [pivot intValue];} 
-							 elsePerformBlock:^(id element) { if (element!=pivot) [array2 addObject:element];}
+		array = [array arrayByPerformingBlock:^id(id element)   { return element;} 
+						  ifElementPassesTest:^BOOL(id element) { return [element intValue] < [pivot intValue];} 
+							 elsePerformBlock:^    (id element) { if (element!=pivot) [array2 addObject:element];}
 		];
 		return [[[NSArray arrayWithArray:quicksort(array)] arrayByAddingObject:pivot] arrayByAddingObjectsFromArray:quicksort(array2)];
 	}
