@@ -35,6 +35,7 @@
 		640450901409CF1D00B3B580 /* arraytools.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = arraytools.1; sourceTree = "<group>"; };
 		640450971409CF5C00B3B580 /* NSArray+FunctionalTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FunctionalTools.h"; sourceTree = "<group>"; };
 		640450981409CF5C00B3B580 /* NSArray+FunctionalTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FunctionalTools.m"; sourceTree = "<group>"; };
+		64AA81FF144F852400E47681 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; path = COPYING; sourceTree = "<group>"; };
 		64DAB160143E2CFE003DC97C /* NSArray+RandomUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RandomUtils.h"; sourceTree = "<group>"; };
 		64DAB161143E2CFE003DC97C /* NSArray+RandomUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RandomUtils.m"; sourceTree = "<group>"; };
 		64F20B9A143E310B004B912A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		6404507A1409CF1D00B3B580 = {
 			isa = PBXGroup;
 			children = (
+				64AA81FF144F852400E47681 /* COPYING */,
 				64F20B9A143E310B004B912A /* README.md */,
 				6404508B1409CF1D00B3B580 /* arraytools */,
 				640450881409CF1D00B3B580 /* Frameworks */,
